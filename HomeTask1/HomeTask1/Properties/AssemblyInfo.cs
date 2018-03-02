@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HomeTask1.Properties")]
+[assembly: AssemblyTitle("HomeTask1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HomeTask1.Properties")]
+[assembly: AssemblyProduct("HomeTask1")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e7e32290-6aa1-44e2-a417-25e62d39383d")]
+[assembly: Guid("1943ecb7-1fda-4a8e-ad13-43e6e4ca898d")]
 
 // Version information for an assembly consists of the following four values:
 //
