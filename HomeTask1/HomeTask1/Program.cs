@@ -23,32 +23,33 @@ namespace DevTask1
             }
 
             MaxNumberOfDuplicates EntryPointObject = new MaxNumberOfDuplicates();
-            Console.WriteLine(EntryPointObject.MaximumNumberofDuplicates(args[0]));
+            Console.WriteLine(EntryPointObject.SearchLengthofMaximumDuplicates(args[0]));
         }
 
 
         /// <summary> 
-        /// Method MaximumNumberofDuplicates 
+        /// Method SearchLengthofMaximumDuplicates
         /// Function for finding the maximum number of repeating identical elements in succession
         /// </summary> 
         /// <param name="transmittedString">String, which was inputed</param> 
         /// <returns>The largest number of identical characters in succession</returns>
-        int MaximumNumberofDuplicates(String transmittedString) 
+        int SearchLengthofMaximumDuplicates(String transmittedString)
         {
-            int maximumAmount = 0, tempMaxNumber = 0;
+            int maximumAmount = 0;
+            int tempMaxNumber = 0;
 
             for (int i = 0; i < transmittedString.Length - 1; i++)
             {
                 if (transmittedString[i] == transmittedString[i + 1])
                 {
-                    tempMaxNumber++; // Check for a match between the current and the next element
+                    tempMaxNumber++;
                 }
                 else
                 {
-                    tempMaxNumber = 0; // Assign the counter to zero if the elements do not match
+                    tempMaxNumber = 0; 
                 }
 
-                if (tempMaxNumber > maximumAmount) //Check if this sequence is longer
+                if (tempMaxNumber > maximumAmount) 
                 {
                     maximumAmount = tempMaxNumber;
                 }
