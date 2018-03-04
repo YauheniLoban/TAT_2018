@@ -3,7 +3,7 @@
 namespace DevTask2
 {
     /// <summary> 
-    /// EntryPointObject
+    /// EntryPoint
     /// Gets the string from console and prints a substring of elements with even indices to the console
     /// </summary> 
     class EntryPoint

@@ -3,7 +3,7 @@
 namespace DevTask2
 {
     /// <summary> 
-    /// EntryPointObject
+    /// SubstringOfCharactersWithEvenIndices
     /// Сreates a substring of elements with even indices to the console
     /// </summary> 
     class SubstringOfCharactersWithEvenIndices
