@@ -10,15 +10,15 @@ namespace DevTask2
     {
         static void Main(string[] args)
         {
-            string stringEnteredFromConsole;
+            string inputString;
             do
             {
                 Console.WriteLine("Enter a non-empty string");
-                stringEnteredFromConsole = Console.ReadLine();
-            } while (stringEnteredFromConsole.Length == 0);
+                inputString = Console.ReadLine();
+            } while (inputString.Length == 0);
 
-            SubstringOfCharactersWithEvenIndices EvenIndexString = new SubstringOfCharactersWithEvenIndices();
-            Console.WriteLine(EvenIndexString.CreateSubstringOfEvenElements(stringEnteredFromConsole));
+            SubstringOfEvenElements EvenIndexString = new SubstringOfEvenElements();
+            Console.WriteLine(EvenIndexString.CreateSubstringOfEvenElements(inputString));
         }
     }
 }

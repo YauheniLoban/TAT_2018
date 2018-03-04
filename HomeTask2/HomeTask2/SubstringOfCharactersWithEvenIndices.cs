@@ -6,13 +6,13 @@ namespace DevTask2
     /// SubstringOfCharactersWithEvenIndices
     /// Сreates a substring of elements with even indices to the console
     /// </summary> 
-    class SubstringOfCharactersWithEvenIndices
+    class SubstringOfEvenElements
     {
         /// <summary> 
         /// Method CreateSubstringOfEvenElements
         /// Function to create a string consisting of even elements of the transmitted string
         /// </summary> 
-        /// <param name="stringForSelectingSubstring">String, which was inputed</param> 
+        /// <param name="stringForSelectingSubstring">The string from which you need to select a substring consisting of even elements</param> 
         /// <returns>Created substring</returns>
         public string CreateSubstringOfEvenElements(string stringForSelectingSubstring)
         {
@@ -20,7 +20,7 @@ namespace DevTask2
 
             for (int i = 0; i < stringForSelectingSubstring.Length; i += 2)
             {
-                allocatedSubstring.Append(stringForSelectingSubstring[i]); // Add an element to the selected row
+                allocatedSubstring.Append(stringForSelectingSubstring[i]); 
             }
 
             return allocatedSubstring.ToString();
