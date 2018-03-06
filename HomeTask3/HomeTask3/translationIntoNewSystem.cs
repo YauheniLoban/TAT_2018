@@ -22,7 +22,7 @@ namespace DevTask3
         /// Method CreateSubstringOfEvenElements
         /// A method that creates a string that is a representation of a number in the new number system
         /// </summary> 
-        /// <returns>valueInNewSystem</returns>
+        /// <returns>Value In New System</returns>
         public string CreatingRepresentationOfNumberInNewSystem()
         {
             StringBuilder valueInNewSystem = new StringBuilder();
@@ -43,7 +43,7 @@ namespace DevTask3
         /// Function for converting numbers to a new number system
         /// </summary> 
         /// <param name="digitForTranslation">number to convert to a new system</param> 
-        /// <returns>figureInNewSystem</returns>
+        /// <returns>Figure In New System</returns>
         private string ConvertingFigureToRepresentationInAnotherSystem (long digitForTranslation)
         {
             char figureInNewSystem;
@@ -58,7 +58,7 @@ namespace DevTask3
         /// Function to create a string of characters in which go in reverse order
         /// </summary> 
         /// <param name="stringToReverse">The string you need to revers</param> 
-        /// <returns>reversedString</returns>
+        /// <returns>Reverse dString</returns>
         private string reverseString(string stringToReverse)
            {
                 char[] reversedString = stringToReverse.ToCharArray();
