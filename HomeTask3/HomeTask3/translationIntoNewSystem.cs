@@ -4,19 +4,19 @@ using System.Text;
 namespace DevTask3
 {
     /// <summary> 
-    /// translationIntoNewSystem
-    /// creates a string that is a translation of a number into another number system
+    /// This class creates a string that is a translation of a number into another number system
     /// </summary>
-    public class translationIntoNewSystem
+    public class TranslationIntoNewSystem
     {
         private long numberForConversion;
         private long foundationOfNewSystem;
 
-        public translationIntoNewSystem(string[] valuesNumberAndBaseOfSystem)
+        public TranslationIntoNewSystem(string[] valuesNumberAndBaseOfSystem)
         {
             numberForConversion = Convert.ToInt64(valuesNumberAndBaseOfSystem[0]);
             foundationOfNewSystem = Convert.ToInt64(valuesNumberAndBaseOfSystem[1]);
         }
+
 
         /// <summary> 
         /// Method CreateSubstringOfEvenElements
@@ -36,15 +36,17 @@ namespace DevTask3
             string ConvertedString;
             ConvertedString = valueInNewSystem.ToString();
 
-            return reverseString(ConvertedString);
+            return ReverseString(ConvertedString);
         }
+
+
         /// <summary> 
-        /// ConvertingFigureToRepresentationInAnotherSystem
+        /// Method ConvertingFigureToRepresentationInAnotherSystem
         /// Function for converting numbers to a new number system
         /// </summary> 
         /// <param name="digitForTranslation">number to convert to a new system</param> 
         /// <returns>Figure In New System</returns>
-        private string ConvertingFigureToRepresentationInAnotherSystem (long digitForTranslation)
+        private string ConvertingFigureToRepresentationInAnotherSystem(long digitForTranslation)
         {
             char figureInNewSystem;
             int index;
@@ -53,18 +55,20 @@ namespace DevTask3
             figureInNewSystem = possibleValuesOfElementsInNewView[index];
             return Convert.ToString(figureInNewSystem);
         }
+
+
         /// <summary> 
-        /// reverseString
+        /// Method ReverseString
         /// Function to create a string of characters in which go in reverse order
         /// </summary> 
         /// <param name="stringToReverse">The string you need to revers</param> 
         /// <returns>Reversed String</returns>
-        private string reverseString(string stringToReverse)
-           {
-                char[] reversedString = stringToReverse.ToCharArray();
-                Array.Reverse(reversedString);
-                return new string(reversedString);
-            }
+        private string ReverseString(string stringToReverse)
+        {
+            char[] reversedString = stringToReverse.ToCharArray();
+            Array.Reverse(reversedString);
+            return new string(reversedString);
+        }
     }
 }
 
