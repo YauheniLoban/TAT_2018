@@ -58,7 +58,7 @@ namespace DevTask3
         /// Function to create a string of characters in which go in reverse order
         /// </summary> 
         /// <param name="stringToReverse">The string you need to revers</param> 
-        /// <returns>Reverse dString</returns>
+        /// <returns>Reversed String</returns>
         private string reverseString(string stringToReverse)
            {
                 char[] reversedString = stringToReverse.ToCharArray();

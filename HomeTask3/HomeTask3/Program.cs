@@ -19,8 +19,8 @@ namespace Task_Dev3
                 return;
 
             }
-            int numberForCheck;
-            if (!Int32.TryParse(args[0], out numberForCheck)||!Int32.TryParse(args[1], out numberForCheck))
+            long numberForCheck;
+            if (!Int64.TryParse(args[0], out numberForCheck)||!Int64.TryParse(args[1], out numberForCheck))
             {
                 Console.WriteLine("You entered not only numbers in the argument string. Please correct the arguments");
                 return ;
