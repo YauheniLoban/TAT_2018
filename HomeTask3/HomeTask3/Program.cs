@@ -25,7 +25,7 @@ namespace Task_Dev3
                 Console.WriteLine("You entered not only numbers in the argument string. Please correct the arguments");
                 return ;
             }
-            if (Convert.ToInt16(args[1]) < 1 || Convert.ToInt16(args[1]) > 20)
+            if (Convert.ToInt16(args[1]) < 2 || Convert.ToInt16(args[1]) > 20)
             {
                 Console.WriteLine("You entered the base of the new system not from the allowed range. Please enter another base of the new system ");
                 return ;
