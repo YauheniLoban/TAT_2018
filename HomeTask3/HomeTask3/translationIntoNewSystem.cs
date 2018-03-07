@@ -11,10 +11,10 @@ namespace DevTask3
         private int numberForConversion;
         private int foundationOfNewSystem;
 
-        public NumberInNewSystem(string valueNumber, string valueBaseOfSystem )
+        public NumberInNewSystem(int valueNumber, int valueBaseOfSystem)
         {
-            numberForConversion = Convert.ToInt32(valueNumber);
-            foundationOfNewSystem = Convert.ToInt32(valueBaseOfSystem);
+            numberForConversion = valueNumber;
+            foundationOfNewSystem = valueBaseOfSystem;
         }
 
         /// <summary> 

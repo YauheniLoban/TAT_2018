@@ -12,31 +12,30 @@ namespace Task_Dev3
     {
         static void Main(string[] args)
         {
+
             try 
             {
                 int digitForTranslation;
                 int foundationOfNewsystem;
                 digitForTranslation = Int32.Parse(args[0]);
                 foundationOfNewsystem = Int32.Parse(args[1]);
-            }
-            catch (ArgumentNullException)
-            {
-                Console.WriteLine("You entered an empty string");
-                return;
+                if (foundationOfNewsystem < 2 || foundationOfNewsystem > 20)
+                {
+                    Console.WriteLine("You entered the base of the new system not from the allowed range. Please enter another base of the new system ");
+                    return;
+                }
+                    NumberInNewSystem convertedString = new NumberInNewSystem(digitForTranslation, foundationOfNewsystem);
+                Console.WriteLine(convertedString.CreatingRepresentationOfNumberInNewSystem());
+
             }
             catch (FormatException)
-            {
-                Console.WriteLine("You entered not only numbers in the argument string. Please correct the arguments");
-                return;
-            }     
-            if (Convert.ToInt16(args[1]) < 2 || Convert.ToInt16(args[1]) > 20)
-            {
-                Console.WriteLine("You entered the base of the new system not from the allowed range. Please enter another base of the new system ");
-                return;
-            }
-            NumberInNewSystem convertedString = new NumberInNewSystem(args[0], args[1]);       
-            Console.WriteLine(convertedString.CreatingRepresentationOfNumberInNewSystem());
+                {
+                Console.WriteLine("you entered incorrect arguments");
+                }
+            catch (Exception)
+                {
+                  Console.WriteLine("You entered an empty string");
+                }
         }
-
     }
 }
