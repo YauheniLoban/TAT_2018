@@ -19,12 +19,19 @@ namespace Task_Dev3
                 Console.WriteLine("You entered an empty string");
                 return;
             }
-            long numberForCheck;
-            if (!Int64.TryParse(args[0], out numberForCheck) || !Int64.TryParse(args[1], out numberForCheck))
+            try 
+            {
+                long digitForTranslation;
+                long foundationOfNewsystem;
+                digitForTranslation = Int64.Parse(args[0]);
+                foundationOfNewsystem = Int64.Parse(args[1]);
+            }
+            catch (FormatException)
             {
                 Console.WriteLine("You entered not only numbers in the argument string. Please correct the arguments");
                 return;
             }
+           
             if (Convert.ToInt16(args[1]) < 2 || Convert.ToInt16(args[1]) > 20)
             {
                 Console.WriteLine("You entered the base of the new system not from the allowed range. Please enter another base of the new system ");
