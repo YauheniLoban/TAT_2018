@@ -4,7 +4,6 @@ using System;
 namespace Task_Dev3
 {
     /// <summary> 
-    /// EntryPoint
     /// We accept from the command line two arguments: 
     /// 1) the number that needs to be transferred to another system of calculation 
     /// 2) the foundation of a new system of calculus 
