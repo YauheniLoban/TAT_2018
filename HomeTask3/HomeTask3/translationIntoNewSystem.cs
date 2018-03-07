@@ -11,7 +11,6 @@ namespace DevTask3
         private int numberForConversion;
         private int foundationOfNewSystem;
 
-        // public NumberInNewSystem(string[] valuesNumberAndBaseOfSystem)
         public NumberInNewSystem(string valueNumber, string valueBaseOfSystem )
         {
             numberForConversion = Convert.ToInt32(valueNumber);

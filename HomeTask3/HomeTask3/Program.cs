@@ -12,17 +12,17 @@ namespace Task_Dev3
     {
         static void Main(string[] args)
         {
-            if(args[0] == string.Empty || args[1] == string.Empty)
-            {
-                Console.WriteLine("You entered an empty string");
-                return;
-            }
             try 
             {
                 int digitForTranslation;
                 int foundationOfNewsystem;
                 digitForTranslation = Int32.Parse(args[0]);
                 foundationOfNewsystem = Int32.Parse(args[1]);
+            }
+            catch (ArgumentNullException)
+            {
+                Console.WriteLine("You entered an empty string");
+                return;
             }
             catch (FormatException)
             {
