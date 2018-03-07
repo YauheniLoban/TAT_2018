@@ -20,18 +20,20 @@ namespace Task_Dev3
                 foundationOfNewsystem = Int32.Parse(args[1]);
                 if (foundationOfNewsystem < 2 || foundationOfNewsystem > 20)
                 {
-                    Console.WriteLine("You entered the base of the new system not from the allowed range. Please enter another base of the new system ");
-                    return;
-                }
-                    NumberInNewSystem convertedString = new NumberInNewSystem(digitForTranslation, foundationOfNewsystem);
+                    throw new ArgumentOutOfRangeException();
+                }    
+                NumberInNewSystem convertedString = new NumberInNewSystem(digitForTranslation, foundationOfNewsystem);
                 Console.WriteLine(convertedString.CreatingRepresentationOfNumberInNewSystem());
-
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("You entered the base of the new system not from the allowed range. Please enter another base of the new system ");
             }
             catch (FormatException)
             {
                 Console.WriteLine("you entered incorrect arguments");
             }
-            catch (Exception)
+            catch (Exception )
             {
                   Console.WriteLine("You entered an empty string");
             }

@@ -34,7 +34,6 @@ namespace DevTask3
             } while (0 != numberForConversion);
             string ConvertedString;
             ConvertedString = valueInNewSystem.ToString();
-
             return ReverseString(ConvertedString);
         }
 
