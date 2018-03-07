@@ -12,7 +12,6 @@ namespace Task_Dev3
     {
         static void Main(string[] args)
         {
-            // We check the arguments for the correctness of the input (only numbers can be entered)
             if(args[0] == string.Empty || args[1] == string.Empty)
             {
                 Console.WriteLine("You entered an empty string");
@@ -20,10 +19,10 @@ namespace Task_Dev3
             }
             try 
             {
-                long digitForTranslation;
-                long foundationOfNewsystem;
-                digitForTranslation = Int64.Parse(args[0]);
-                foundationOfNewsystem = Int64.Parse(args[1]);
+                int digitForTranslation;
+                int foundationOfNewsystem;
+                digitForTranslation = Int32.Parse(args[0]);
+                foundationOfNewsystem = Int32.Parse(args[1]);
             }
             catch (FormatException)
             {
@@ -35,7 +34,7 @@ namespace Task_Dev3
                 Console.WriteLine("You entered the base of the new system not from the allowed range. Please enter another base of the new system ");
                 return;
             }
-            TranslationIntoNewSystem convertedString = new TranslationIntoNewSystem(args);       
+            NumberInNewSystem convertedString = new NumberInNewSystem(args[0], args[1]);       
             Console.WriteLine(convertedString.CreatingRepresentationOfNumberInNewSystem());
         }
 

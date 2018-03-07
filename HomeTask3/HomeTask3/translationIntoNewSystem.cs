@@ -6,17 +6,17 @@ namespace DevTask3
     /// <summary> 
     /// This class creates a string that is a translation of a number into another number system
     /// </summary>
-    public class TranslationIntoNewSystem
+    public class NumberInNewSystem
     {
-        private long numberForConversion;
-        private long foundationOfNewSystem;
+        private int numberForConversion;
+        private int foundationOfNewSystem;
 
-        public TranslationIntoNewSystem(string[] valuesNumberAndBaseOfSystem)
+        // public NumberInNewSystem(string[] valuesNumberAndBaseOfSystem)
+        public NumberInNewSystem(string valueNumber, string valueBaseOfSystem )
         {
-            numberForConversion = Convert.ToInt64(valuesNumberAndBaseOfSystem[0]);
-            foundationOfNewSystem = Convert.ToInt64(valuesNumberAndBaseOfSystem[1]);
+            numberForConversion = Convert.ToInt32(valueNumber);
+            foundationOfNewSystem = Convert.ToInt32(valueBaseOfSystem);
         }
-
 
         /// <summary> 
         /// Method CreateSubstringOfEvenElements
@@ -26,11 +26,11 @@ namespace DevTask3
         public string CreatingRepresentationOfNumberInNewSystem()
         {
             StringBuilder valueInNewSystem = new StringBuilder();
-            long nextNumberToAdd;
+            int nextNumberToAdd;
             do
             {
                 nextNumberToAdd = numberForConversion % foundationOfNewSystem;
-                valueInNewSystem.Append(ConvertingFigureToRepresentationInAnotherSystem(nextNumberToAdd));
+                valueInNewSystem.Append(FigureConverter(nextNumberToAdd));
                 numberForConversion = numberForConversion / foundationOfNewSystem;
             } while (0 != numberForConversion);
             string ConvertedString;
@@ -39,30 +39,14 @@ namespace DevTask3
             return ReverseString(ConvertedString);
         }
 
-
-        /// <summary> 
-        /// Method ConvertingFigureToRepresentationInAnotherSystem
-        /// Function for converting numbers to a new number system
-        /// </summary> 
-        /// <param name="digitForTranslation">number to convert to a new system</param> 
-        /// <returns>Figure In New System</returns>
-        private string ConvertingFigureToRepresentationInAnotherSystem(long digitForTranslation)
+        private string FigureConverter(int digitForTranslation)
         {
             char figureInNewSystem;
-            int index;
-            index = Convert.ToInt16(digitForTranslation);
-            var possibleValuesOfElementsInNewView = "0123456789ABCDEFGHIJ";
-            figureInNewSystem = possibleValuesOfElementsInNewView[index];
+            string possibleValues = "0123456789ABCDEFGHIJ";
+            figureInNewSystem = possibleValues[digitForTranslation];
             return Convert.ToString(figureInNewSystem);
         }
 
-
-        /// <summary> 
-        /// Method ReverseString
-        /// Function to create a string of characters in which go in reverse order
-        /// </summary> 
-        /// <param name="stringToReverse">The string you need to revers</param> 
-        /// <returns>Reversed String</returns>
         private string ReverseString(string stringToReverse)
         {
             char[] reversedString = stringToReverse.ToCharArray();
