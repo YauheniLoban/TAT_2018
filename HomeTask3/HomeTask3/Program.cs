@@ -12,7 +12,6 @@ namespace Task_Dev3
     {
         static void Main(string[] args)
         {
-
             try 
             {
                 int digitForTranslation;
@@ -29,13 +28,13 @@ namespace Task_Dev3
 
             }
             catch (FormatException)
-                {
+            {
                 Console.WriteLine("you entered incorrect arguments");
-                }
+            }
             catch (Exception)
-                {
+            {
                   Console.WriteLine("You entered an empty string");
-                }
+            }
         }
     }
 }
