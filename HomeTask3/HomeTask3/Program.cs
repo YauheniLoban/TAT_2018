@@ -23,7 +23,7 @@ namespace Task_Dev3
                     throw new ArgumentOutOfRangeException();
                 }    
                 NumberInNewSystem convertedString = new NumberInNewSystem(digitForTranslation, foundationOfNewsystem);
-                Console.WriteLine(convertedString.CreatingRepresentationOfNumberInNewSystem());
+                Console.WriteLine("Number in the new system of calculation : " + convertedString.CreatingRepresentationOfNumberInNewSystem());
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -33,7 +33,7 @@ namespace Task_Dev3
             {
                 Console.WriteLine("you entered incorrect arguments");
             }
-            catch (Exception )
+            catch (Exception)
             {
                   Console.WriteLine("You entered an empty string");
             }
