@@ -10,11 +10,11 @@ namespace HomeTask2.Test
         [InlineData("nanan", "nnn")]
         [InlineData("nanana", "nnn")]
         [InlineData("Z", "Z")]
-        public void CreateSubstringOfEvenElementsTest(string line, string resalt)
+        public void CreateSubstringOfEvenElementsTest(string line, string result)
         {
             SubstringOfEvenElements evensElemenst = new SubstringOfEvenElements();
             string actial = evensElemenst.CreateSubstringOfEvenElements(line);
-            Assert.Equal(resalt, actial);
+            Assert.Equal(result, actial);
         }
 
         [Theory]

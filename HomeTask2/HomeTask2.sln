@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask2", "HomeTask2\HomeTask2.csproj", "{3495F36D-D914-46D8-9A85-EE1B80F67029}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{FFFA2848-B410-4DB3-A521-0229C376F175}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTask2Test", "UnitTestProject1\HomeTask2Test.csproj", "{FFFA2848-B410-4DB3-A521-0229C376F175}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
