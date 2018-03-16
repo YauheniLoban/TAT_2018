@@ -15,12 +15,9 @@ namespace HomeTask3.Test
         [Test]
         public void CreatingRepresentationOfNumberInNewSystemTest(int acceptedNumber, int ecceptedFoundetion, string result)
         {
-              // act
-                NumberInNewSystem ptr = new NumberInNewSystem(acceptedNumber, ecceptedFoundetion);
-                string actial = ptr.CreatingRepresentationOfNumberInNewSystem();
-              // assert
-              Assert.AreEqual(result, actial);  
-                    
+            NumberInNewSystem numberinNewSystem = new NumberInNewSystem(acceptedNumber, ecceptedFoundetion);
+            string actial = numberinNewSystem.CreatingRepresentationOfNumberInNewSystem();
+            Assert.AreEqual(result, actial);
         }
         [TestCase(-1, 20)]
         [TestCase(255, 1)]
@@ -28,10 +25,10 @@ namespace HomeTask3.Test
         [Test]
         public void CreatingRepresentationOfNumberInNewSystemTest_ArgumentOutOfRangeException(int acceptedNumber, int ecceptedFoundetion)
         {
-            NumberInNewSystem ptr = new NumberInNewSystem(acceptedNumber, ecceptedFoundetion);
+            NumberInNewSystem numberinNewSystem = new NumberInNewSystem(acceptedNumber, ecceptedFoundetion);
             Assert.Throws<ArgumentOutOfRangeException>
-             ( 
-                () => ptr.CreatingRepresentationOfNumberInNewSystem() 
+             (
+                () => numberinNewSystem.CreatingRepresentationOfNumberInNewSystem()
              );
         }
     }
