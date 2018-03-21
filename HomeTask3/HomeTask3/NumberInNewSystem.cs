@@ -24,6 +24,14 @@ namespace DevTask3
         /// <returns>Value In New System</returns>
         public string CreatingRepresentationOfNumberInNewSystem()
         {
+            if (foundationOfNewSystem < 2 || foundationOfNewSystem > 20)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            if (numberForConversion < 0 || numberForConversion > Int32.MaxValue)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             StringBuilder valueInNewSystem = new StringBuilder();
             int nextNumberToAdd;
             do
@@ -53,6 +61,3 @@ namespace DevTask3
         }
     }
 }
-
-
-

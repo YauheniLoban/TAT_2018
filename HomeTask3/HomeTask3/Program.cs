@@ -17,11 +17,7 @@ namespace Task_Dev3
                 int digitForTranslation;
                 int foundationOfNewsystem;
                 digitForTranslation = Int32.Parse(args[0]);
-                foundationOfNewsystem = Int32.Parse(args[1]);
-                if (foundationOfNewsystem < 2 || foundationOfNewsystem > 20)
-                {
-                    throw new ArgumentOutOfRangeException();
-                }    
+                foundationOfNewsystem = Int32.Parse(args[1]);  
                 NumberInNewSystem convertedString = new NumberInNewSystem(digitForTranslation, foundationOfNewsystem);
                 Console.WriteLine("Number in the new system of calculation : " + convertedString.CreatingRepresentationOfNumberInNewSystem());
             }
