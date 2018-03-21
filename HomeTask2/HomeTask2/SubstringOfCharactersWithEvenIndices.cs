@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using System;
 
 namespace DevTask2
 {
@@ -6,7 +7,7 @@ namespace DevTask2
     /// SubstringOfCharactersWithEvenIndices
     /// Сreates a substring of elements with even indices to the console
     /// </summary> 
-    class SubstringOfEvenElements
+   public class SubstringOfEvenElements
     {
         /// <summary> 
         /// Method CreateSubstringOfEvenElements
@@ -16,6 +17,11 @@ namespace DevTask2
         /// <returns>Created substring</returns>
         public string CreateSubstringOfEvenElements(string stringForSelectingSubstring)
         {
+            if(stringForSelectingSubstring == string.Empty)
+            {
+                throw new ArgumentException();
+            }
+
             StringBuilder allocatedSubstring = new StringBuilder();
 
             for (int i = 0; i < stringForSelectingSubstring.Length; i += 2)
