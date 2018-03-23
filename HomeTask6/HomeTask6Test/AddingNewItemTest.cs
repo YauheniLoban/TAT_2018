@@ -11,7 +11,7 @@ namespace HomeTask6Test
         [TestCase("pen", "", "5", "8")]
         [TestCase("pen", "ADD", "-5", "8")]
         [TestCase("pen", "ADD", "5", "-8")]
-        [TestCase("pen", "ADD", "", "-8")]
+        [TestCase("pen", "ADD", "", "8")]
         [TestCase("pen", "ADD", "5", "")]
         [TestCase("pen", "ADD", "5vs", "8")]
         [TestCase("pen", "ADD", "5", "8vs")]

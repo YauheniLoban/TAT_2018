@@ -23,6 +23,5 @@ namespace HomeTask6
             }
             return totalCost / total;
         }
-
     }
 }
