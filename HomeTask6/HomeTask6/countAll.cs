@@ -10,6 +10,7 @@ namespace HomeTask6
         public double counting(List<Product> listOfProducts, string type)
         {
             double total = 0;
+
             foreach (Product nextItemInList in listOfProducts)
             {
                 total = total + nextItemInList.QuantityOfProduct;

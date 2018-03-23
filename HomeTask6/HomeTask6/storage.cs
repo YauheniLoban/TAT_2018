@@ -10,7 +10,6 @@ namespace HomeTask6
     public class Storage
     {
         private List<Product> listOfProducts = new List<Product>();
-        // private IStorable calculationType;
         private IStorable calculationType;
 
         /// <summary> 

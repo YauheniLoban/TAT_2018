@@ -12,6 +12,7 @@ namespace HomeTask6
         {
             double total = 0;
             double totalCost = 0;
+
             foreach (Product nextItemInList in listOfProducts)
             {
                 if (nextItemInList.TypeOfProduct == type)
