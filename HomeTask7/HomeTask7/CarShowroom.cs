@@ -33,13 +33,13 @@ namespace HomeTask7
             Console.WriteLine("Catalog :");
             foreach (Car c in catalog)
             {
-                c.whoami();
+                c.OutInformationAboutCar();
             }
 
             Console.WriteLine("Stoch :");
             foreach (Car c in stock)
             {
-                c.whoami();
+                c.OutInformationAboutCar();
             }
         }
     }

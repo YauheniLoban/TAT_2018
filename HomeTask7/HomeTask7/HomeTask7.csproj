@@ -73,6 +73,7 @@
     <Compile Include="CarsType\Hyndai.cs" />
     <Compile Include="Comand\IComand.cs" />
     <Compile Include="CarsType\Nissan.cs" />
+    <Compile Include="Comand\Invoker.cs" />
     <Compile Include="Porsche.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Comand\SimilarOptionsInStock.cs" />

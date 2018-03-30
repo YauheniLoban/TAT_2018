@@ -18,12 +18,12 @@ namespace HomeTask7
         public string climateControl { get; set; }
         public string salonType { get; set; }
 
-        public void whoami()
+        public void OutInformationAboutCar()
         {
-            Console.WriteLine(model + " " + volume + " " + typeOfBody + " " + transmissionType + " " + power + "" + climateControl + " " + this.GetType().Name);
+            Console.WriteLine(this.GetType().Name+"  " + model + "  " + volume + "   " + typeOfBody + " " + transmissionType + " " + power + "   " + climateControl + "  " + engineType );
         }
 
-        public void fillingFields(JObject carObject)
+        public void FillingFields(JObject carObject)
         {
             model = carObject["model"].Value<string>();
             typeOfBody = carObject["typeOfBody"].Value<string>();

@@ -8,6 +8,7 @@ namespace HomeTask7
 {
      interface IComand
     {
-        IEnumerable<Car> Execute(CarShowroom score, ProspectiveCar prorespectiveCar);
+        //   IEnumerable<Car> Execute(CarShowroom score, ProspectiveCar prorespectiveCar);
+        IEnumerable<Car> Execute();
     }
 }

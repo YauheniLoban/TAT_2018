@@ -30,22 +30,22 @@ namespace HomeTask7
             {
                 case "Nissan":
                     newCar = new Nissan();
-                    newCar.fillingFields(carObject);
+                    newCar.FillingFields(carObject);
                     break;
 
                 case "Audi":
                     newCar = new Audi();
-                    newCar.fillingFields(carObject);
+                    newCar.FillingFields(carObject);
                     break;
 
                 case "Ford":
                     newCar = new Ford();
-                    newCar.fillingFields(carObject);
+                    newCar.FillingFields(carObject);
                     break;
 
                 case "Hyndai":
                     newCar = new Hyndai();
-                    newCar.fillingFields(carObject);
+                    newCar.FillingFields(carObject);
                     break;
 
                 default:
