@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeTask7
 {
-    class Invoker
+    public class Invoker
     {
         IComand comand;
 

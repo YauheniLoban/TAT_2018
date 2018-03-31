@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeTask7
 {
-     interface IComand
+    public interface IComand
     {
         IEnumerable<Car> Execute();
     }

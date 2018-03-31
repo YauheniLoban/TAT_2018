@@ -11,18 +11,24 @@ namespace HomeTask7
     /// <summary> 
     /// A class that defines how to add a new item to a file
     /// </summary>
-    class AddingItemToFile : IComand
+    public class AddingItemToFile : IComand
     {
         public CarShowroom carShowroom;
         public ProspectiveCar prorespectiveCar;
-        public AddingItemToFile (CarShowroom carShowroomSet , ProspectiveCar prorespectiveCarSet)
+        public AddingItemToFile(CarShowroom carShowroomSet, ProspectiveCar prorespectiveCarSet)
         {
             carShowroom = carShowroomSet;
             prorespectiveCar = prorespectiveCarSet;
         }
-     
+
         public IEnumerable<Car> Execute()
         {
+            if ((prorespectiveCar.climateControl == null) && prorespectiveCar.engineType == null && prorespectiveCar.mark == null &&
+                prorespectiveCar.model == null && prorespectiveCar.power == null && prorespectiveCar.salonType == null && prorespectiveCar.transmissionType == null &&
+                prorespectiveCar.typeOfBody == null && prorespectiveCar.volume == null)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             List<Car> addedList = new List<Car>();
             foreach (Car nextCar in carShowroom.stock)
             {
@@ -41,7 +47,7 @@ namespace HomeTask7
             addedList.Add(prorespectiveCar);
             File.WriteAllText(carShowroom.wayToStock, JsonConvert.SerializeObject(addedList));
             carShowroom.ReadJsonFile();
-            IEnumerable<Car> updatedInformationInFile = from nextCar in carShowroom.stock                                           
+            IEnumerable<Car> updatedInformationInFile = from nextCar in carShowroom.stock
             select nextCar;
             return updatedInformationInFile;
         }

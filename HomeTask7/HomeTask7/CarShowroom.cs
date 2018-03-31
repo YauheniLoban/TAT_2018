@@ -8,11 +8,11 @@ namespace HomeTask7
     /// <summary> 
     /// Class intended for storage and work and information about the cathode and stock
     /// </summary>
-    class CarShowroom
+    public class CarShowroom
     {
         public List<Car> catalog;
         public List<Car> stock;
-        public  string wayToCatalog;
+        public string wayToCatalog;
         public string wayToStock;
 
         public CarShowroom(string toCatalog, string toStock)

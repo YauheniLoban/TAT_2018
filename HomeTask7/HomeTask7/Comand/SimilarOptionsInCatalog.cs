@@ -9,7 +9,7 @@ namespace HomeTask7
     /// <summary> 
     /// Class defining method for finding similar items in catalog
     /// </summary>
-    class SimilarOptionsInCatalog : IComand
+    public class SimilarOptionsInCatalog : IComand
     {
         public CarShowroom carShowroom;
         public ProspectiveCar prorespectiveCar;
