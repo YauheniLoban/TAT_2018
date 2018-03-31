@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask7
 {
+    /// <summary> 
+    /// A class that defines how to add a new item to a file
+    /// </summary>
     class AddingItemToFile : IComand
     {
         public CarShowroom carShowroom;
@@ -20,23 +23,23 @@ namespace HomeTask7
      
         public IEnumerable<Car> Execute()
         {
-            List<Car> addedlist = new List<Car>();
+            List<Car> addedList = new List<Car>();
             foreach (Car nextCar in carShowroom.stock)
             {
-                ProspectiveCar addinlist = new ProspectiveCar();
-                addinlist.mark = nextCar.GetType().Name;
-                addinlist.model = nextCar.model;
-                addinlist.power = nextCar.power;
-                addinlist.salonType = nextCar.salonType;
-                addinlist.transmissionType = nextCar.transmissionType;
-                addinlist.typeOfBody = nextCar.typeOfBody;
-                addinlist.volume = nextCar.volume;
-                addinlist.engineType = nextCar.engineType;
-                addinlist.climateControl = nextCar.climateControl;
-                addedlist.Add(addinlist);
+                ProspectiveCar addInList = new ProspectiveCar();
+                addInList.mark = nextCar.GetType().Name;
+                addInList.model = nextCar.model;
+                addInList.power = nextCar.power;
+                addInList.salonType = nextCar.salonType;
+                addInList.transmissionType = nextCar.transmissionType;
+                addInList.typeOfBody = nextCar.typeOfBody;
+                addInList.volume = nextCar.volume;
+                addInList.engineType = nextCar.engineType;
+                addInList.climateControl = nextCar.climateControl;
+                addedList.Add(addInList);
             }
-            addedlist.Add(prorespectiveCar);
-            File.WriteAllText(carShowroom.wayToStock, JsonConvert.SerializeObject(addedlist));
+            addedList.Add(prorespectiveCar);
+            File.WriteAllText(carShowroom.wayToStock, JsonConvert.SerializeObject(addedList));
             carShowroom.ReadJsonFile();
             IEnumerable<Car> updatedInformationInFile = from nextCar in carShowroom.stock                                           
             select nextCar;

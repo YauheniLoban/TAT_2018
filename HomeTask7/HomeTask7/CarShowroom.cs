@@ -2,12 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeTask7
 {
+    /// <summary> 
+    /// Class intended for storage and work and information about the cathode and stock
+    /// </summary>
     class CarShowroom
     {
         public List<Car> catalog;
@@ -21,6 +21,9 @@ namespace HomeTask7
             wayToStock = toStock;
         }
 
+        /// <summary> 
+        /// Converts information from a  JSON file to a list of Car
+        /// </summary> 
         public void ReadJsonFile()
         {
             CarConverter converter = new CarConverter();
@@ -28,19 +31,22 @@ namespace HomeTask7
             stock = JsonConvert.DeserializeObject<List<Car>>(File.ReadAllText(wayToStock), converter);
         }
 
+        /// <summary> 
+        /// displays in the console information about all Car read from the file
+        /// </summary> 
         public void OutputInformation()
         {
             this.ReadJsonFile();
             Console.WriteLine("Catalog :");
-            foreach (Car c in catalog)
+            foreach (Car nextCar in catalog)
             {
-                c.OutInformationAboutCar();
+                nextCar.OutInformationAboutCar();
             }
 
             Console.WriteLine("Stoch :");
-            foreach (Car c in stock)
+            foreach (Car nextCar in stock)
             {
-                c.OutInformationAboutCar();
+                nextCar.OutInformationAboutCar();
             }
         }
     }

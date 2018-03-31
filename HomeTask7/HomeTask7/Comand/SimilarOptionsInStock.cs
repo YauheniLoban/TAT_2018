@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask7
 {
+    /// <summary> 
+    /// Class defining method for finding similar items in stock
+    /// </summary>
     class SimilarOptionsInStock : IComand
     {
         public CarShowroom carShowroom;

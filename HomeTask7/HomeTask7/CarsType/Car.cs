@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask7
 {
+    /// <summary> 
+    /// Class describing the general characteristics of the Car
+    /// </summary>
     abstract public class Car
     {
         public string model { get; set; }
@@ -18,6 +21,9 @@ namespace HomeTask7
         public string climateControl { get; set; }
         public string salonType { get; set; }
 
+        /// <summary> 
+        /// output of Car characteristics
+        /// </summary>
         public void OutInformationAboutCar()
         {
             Console.WriteLine("car make:" + this.GetType().Name + "  car model:" + model + "  body type:" + typeOfBody + 
@@ -25,6 +31,9 @@ namespace HomeTask7
             + "   way to manage the climate" + climateControl + "  type of engine" + engineType + "  type of salon:" + salonType);
         }
 
+        /// <summary> 
+        /// method for filling the characteristics of the Car based on information from the file
+        /// </summary>
         public void FillingFields(JObject carObject)
         {
             model = carObject["model"].Value<string>();

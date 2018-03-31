@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace HomeTask7
 {
-   public class ProspectiveCar : Car
+    /// <summary> 
+    /// Class describing the machine that meets the wishes of the user
+    /// </summary>
+    public class ProspectiveCar : Car
     {
         public string mark { get; set; }
 
+        /// <summary> 
+        /// method for user input desired characteristics
+        /// </summary>
         public void EnteringTheDesiredCharacteristics()
         {
             Console.WriteLine("If any options you are not interested in, enter an empty string");

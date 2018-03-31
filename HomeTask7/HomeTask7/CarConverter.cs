@@ -1,14 +1,13 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HomeTask7
 {
+    /// <summary> 
+    /// A class for converting information from a file into objects of the required type
+    /// </summary>
     public class CarConverter : JsonConverter
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
@@ -19,6 +18,22 @@ namespace HomeTask7
         public override bool CanConvert(Type objectType)
         {
             return true;
+        }
+
+        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+        {
+            List<Car> cars = new List<Car>();
+            if (reader.TokenType == JsonToken.StartArray)
+            {
+                JArray array = JArray.Load(reader);
+                foreach (JObject car in array.Children())
+                {
+                    cars.Add(Factory(car));
+                }
+                return cars;
+            }
+
+            throw new NotImplementedException();
         }
 
         private Car Factory(JObject carObject)
@@ -53,22 +68,6 @@ namespace HomeTask7
                     break;
             }
             return newCar;
-        }
-
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            List<Car> cars = new List<Car>();
-            if (reader.TokenType == JsonToken.StartArray)
-            {
-                JArray array = JArray.Load(reader);
-                foreach (JObject car in array.Children())
-                {
-                    cars.Add(Factory(car));
-                }
-                return cars;
-            }
-
-            throw new NotImplementedException();
         }
     }
 }
