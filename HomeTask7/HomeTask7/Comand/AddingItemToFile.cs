@@ -51,6 +51,5 @@ namespace HomeTask7
             select nextCar;
             return updatedInformationInFile;
         }
-
     }
 }

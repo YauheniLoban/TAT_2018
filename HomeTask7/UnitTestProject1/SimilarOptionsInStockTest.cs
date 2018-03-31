@@ -16,6 +16,14 @@ namespace UnitTestProject1
             Invoker newInvoker = new Invoker();
             ProspectiveCar wantedCar = new ProspectiveCar();
             wantedCar.mark = missingBrand;
+            wantedCar.model = "";
+            wantedCar.typeOfBody = "";
+            wantedCar.transmissionType = "";
+            wantedCar.engineType = "";
+            wantedCar.volume = "";
+            wantedCar.power = "";
+            wantedCar.climateControl = "";
+            wantedCar.salonType = "";
             newInvoker.SetCommand(new SimilarOptionsInStock(salon, wantedCar));
             Assert.Throws<ArgumentOutOfRangeException>
             (
@@ -46,6 +54,5 @@ namespace UnitTestProject1
                 similarCars[0].transmissionType == transmissionType[1] && similarCars[0].engineType == engineType[1] && similarCars[0].volume == volume[1] &&
                 similarCars[0].power == power[1] && similarCars[0].climateControl == climateContro[1] && similarCars[0].salonType == salonType[1]);
         }
-
     }
 }

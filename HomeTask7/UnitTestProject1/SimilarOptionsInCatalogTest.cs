@@ -31,7 +31,6 @@ namespace UnitTestProject1
             );
         }
 
-
         [TestCase(new string[] { "Ford" }, new string[] { "", "JS52" }, new string[] { "", "Param1" }, new string[] { "", "Param2" }, new string[] { "", "Param3" }, new string[] { "", "Param4" }, new string[] { "", "50 horses" }, new string[] { "", "Param5" }, new string[] { "", "Leze" }, "C:\\Users\\Lenovo\\Source\\Repos\\NewRepo\\HomeTask7\\UnitTestProject1\\TestCatalog.json", "C:\\Users\\Lenovo\\Source\\Repos\\NewRepo\\HomeTask7\\UnitTestProject1\\TestStock.json")]
         public void SimilarOptionsInCatalog_Test(string[] brand, string[] model, string[] typeOfBody, string[] transmissionType, string[] engineType, string[] volume, string[] power, string[] climateContro, string[] salonType, string wayToCatalog, string wayToStock)
         {

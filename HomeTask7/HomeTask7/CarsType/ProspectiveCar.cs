@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace HomeTask7
 {
     /// <summary> 
-    /// Class describing the machine that meets the wishes of the user
+    /// Class describing Car that meets the wishes of the user
     /// </summary>
     public class ProspectiveCar : Car
     {
