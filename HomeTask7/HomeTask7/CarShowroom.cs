@@ -30,6 +30,7 @@ namespace HomeTask7
 
         public void OutputInformation()
         {
+            this.ReadJsonFile();
             Console.WriteLine("Catalog :");
             foreach (Car c in catalog)
             {

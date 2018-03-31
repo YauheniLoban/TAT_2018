@@ -20,7 +20,9 @@ namespace HomeTask7
 
         public void OutInformationAboutCar()
         {
-            Console.WriteLine(this.GetType().Name+"  " + model + "  " + volume + "   " + typeOfBody + " " + transmissionType + " " + power + "   " + climateControl + "  " + engineType );
+            Console.WriteLine("car make:" + this.GetType().Name + "  car model:" + model + "  body type:" + typeOfBody + 
+            "  volume:" + volume + "   transmission type:" + transmissionType + "   power:" + power 
+            + "   way to manage the climate" + climateControl + "  type of engine" + engineType + "  type of salon:" + salonType);
         }
 
         public void FillingFields(JObject carObject)

@@ -17,23 +17,7 @@ namespace HomeTask7
             carShowroom = carShowroomSet;
             prorespectiveCar = prorespectiveCarSet;
         }
-        /*  public IEnumerable<Car> Execute(CarShowroom score, ProspectiveCar prorespectiveCar)
-          {
-              List<Car> addedlist = new List<Car>();
-              foreach (Car nextCar in score.stock)
-              {
-                  ProspectiveCar addinlist = new ProspectiveCar();
-                  addinlist.mark = nextCar.GetType().Name;
-                  addinlist.model = nextCar.model;
-                  addinlist.power = nextCar.power;
-                  addinlist.salonType = nextCar.salonType;
-                  addinlist.transmissionType = nextCar.transmissionType;
-                  addinlist.typeOfBody = nextCar.typeOfBody;
-                  addinlist.volume = nextCar.volume;
-                  addinlist.engineType = nextCar.engineType;
-                  addinlist.climateControl = nextCar.climateControl;
-                  addedlist.Add(addinlist);
-              }*/
+     
         public IEnumerable<Car> Execute()
         {
             List<Car> addedlist = new List<Car>();
