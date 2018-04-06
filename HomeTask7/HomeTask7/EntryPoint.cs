@@ -10,6 +10,7 @@ namespace HomeTask7
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             try
             {
                 CarShowroom salon = new CarShowroom(args[0], args[1]);
