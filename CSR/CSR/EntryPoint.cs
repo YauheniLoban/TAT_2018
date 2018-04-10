@@ -13,7 +13,7 @@ namespace Task_06_04_2018
             Car[] carArray = new Car[3]
        {
             new Car("Model1", "Compani1"),
-            new Car("Model1", "Compani2"),
+            new Car("Model2", "Compani2"),
             new Car("Model1", "Compani3"),
        };
 
