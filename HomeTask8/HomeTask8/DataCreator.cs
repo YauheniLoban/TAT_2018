@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask8
 {
+    /// <summary>
+    /// Create information about user data
+    /// </summary>
     class DataCreator
     {
         public double AverageAge(List<User> users)

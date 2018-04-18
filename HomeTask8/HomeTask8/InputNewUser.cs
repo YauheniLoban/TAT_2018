@@ -50,10 +50,7 @@ namespace HomeTask8
         protected virtual void OnOutputNamesakes(NamesakesEventArgs ev)
         {
             EventHandler<NamesakesEventArgs> handler = OutputNamesakes;
-         //   if (handler != null)
-          //  {
-                handler(this, ev);
-           // }
+            handler(this, ev);
         }
         public event EventHandler<NamesakesEventArgs> OutputNamesakes;
     }

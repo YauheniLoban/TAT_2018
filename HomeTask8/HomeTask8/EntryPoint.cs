@@ -15,17 +15,30 @@ namespace HomeTask8
                 InputNewUser userData = new InputNewUser();
                 DataCreator dataInfo = new DataCreator();
                 userData.OutputNamesakes += WriteAndOutputNamesakes;
-                Console.WriteLine("Press 'Enter' for adding users or any other button for exit...");
-                while (Console.ReadKey(true).KeyChar == '\r')
+                bool escapeCondition = true;
+                client.SetCommand(new InformationOnCommand(dataInfo, userData));
+                while (escapeCondition)
                 {
-                    userData.AddUsers();
-                    client.SetCommand(new InformationOnCommand(dataInfo, userData));
-                    client.CalculateAverageAge();
-                    client.FindOldestUser();
-                    client.FindPopularWomanName();
+                    Console.WriteLine("Select an action (enter the action number in the console) :\n1) Enter new user \n2)Calculate the average age of users \n3)find the senior user \n4)find the most popular woman name");
+                    string stringKey = Console.ReadLine();
+                    switch (stringKey)
+                    {
+                        case "1":
+                            userData.AddUsers();
+                            break;
+                        case "2":
+                            client.CalculateAverageAge();
+                            break;
+                        case "3":
+                            client.FindOldestUser();
+                            break;
+                        case "4":
+                            client.FindPopularWomanName();
+                            break;
+                    }
                 }
-            }
-            catch (FormatException ex)
+         }
+         catch (FormatException ex)
             {
                 Console.WriteLine(ex.Message);
             }

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask8
 {
+    /// <summary>
+    /// Declare commands
+    /// </summary>
     interface ICommand
     {
         void ExecuteAverageAge();

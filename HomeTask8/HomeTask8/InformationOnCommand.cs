@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeTask8
 {
+    /// <summary>
+    /// Redefine methods of commands
+    /// </summary>
     class InformationOnCommand : ICommand
     {
         DataCreator dataInfo;
@@ -40,6 +43,10 @@ namespace HomeTask8
                 {
                     Console.WriteLine(name);
                 }
+            }
+            else
+            {
+                Console.WriteLine("Among users there are no women: ");
             }
         }
     }
