@@ -9,7 +9,7 @@ namespace HomeTask8
     /// <summary>
     /// Create information about user data
     /// </summary>
-     class DataCreator
+    public class DataCreator
     {
         public double AverageAge(List<User> users)
         {
