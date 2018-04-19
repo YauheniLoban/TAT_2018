@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
 namespace HomeTask_18_04_2018
@@ -17,17 +18,25 @@ namespace HomeTask_18_04_2018
 
         public void DownloadAllFile()
         {
+            List<TaskAwaiter> awaiterList = new List<TaskAwaiter>();
+
             Console.WriteLine("downloading files started");
             foreach(FileInformation next in downloadList)
             {
-                StartDownloading(next).GetAwaiter().GetResult();
+                awaiterList.Add(StartDownloading(next).GetAwaiter());
+            }
+
+            foreach(TaskAwaiter awaiter in awaiterList)
+            {
+                awaiter.GetResult();
             }
         }
 
         static async Task StartDownloading(FileInformation file)
         {
+            Console.WriteLine("Starting download: " + file.fileName);
             string time = await Task.Run(() => Downloding(file));
-            Console.WriteLine("Download file :" +file.fileName + " completed in time: " + time);
+            Console.WriteLine("Download file :" + file.fileName + " completed in time: " + time);
         }
 
         static string Downloding(FileInformation file)
