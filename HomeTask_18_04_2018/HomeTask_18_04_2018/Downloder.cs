@@ -20,11 +20,11 @@ namespace HomeTask_18_04_2018
             Console.WriteLine("downloading files started");
             foreach(FileInformation next in downloadList)
             {
-                StartDownloading(next);
+                StartDownloading(next).GetAwaiter().GetResult();
             }
         }
 
-        static async void StartDownloading(FileInformation file)
+        static async Task StartDownloading(FileInformation file)
         {
             string time = await Task.Run(() => Downloding(file));
             Console.WriteLine("Download file :" +file.fileName + " completed in time: " + time);

@@ -18,8 +18,6 @@ namespace HomeTask_18_04_2018
             str = reader.ReadJsonFile("C:\\Users\\Lenovo\\Source\\Repos\\NewRepo\\HomeTask_18_04_2018\\HomeTask_18_04_2018\\URLAndFileName.json");
             Downloder downloder = new Downloder(str);
             downloder.DownloadAllFile();
-            Console.WriteLine("something");
-            Console.ReadLine();
         }
     }
 }
